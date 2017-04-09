@@ -3,7 +3,6 @@ const {getUserFirstLanguage, getUserPlatform} = require.main.require('./selector
 const app = express();
 
 app.get('/whoami', (req, res) => {
-	console.log(req.headers);
 	res.send({
 		ip: req.ip,
 		language: getUserFirstLanguage(req.headers['accept-language']),
